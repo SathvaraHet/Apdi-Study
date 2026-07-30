@@ -19,6 +19,10 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
 
+    # GitHub સર્વર પોતે ગ્રેડલ અને gradlew જનરેટ કરી લેશે
+    - name: Setup Gradle Wrapper
+      run: gradle wrapper --gradle-version 8.2
+
     - name: Make gradlew executable
       run: chmod +x gradlew
 
